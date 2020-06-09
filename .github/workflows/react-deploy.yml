@@ -31,7 +31,7 @@ jobs:
   
     - name: Building App
       run: yarn build
-      working-directory: assignment02
+      working-directory: ./assignment02
       
     - name: Deploy App
       run: surge ./assignment02/ simple-react-app.sh --token ${{ secrets.SURGE_TOKEN }}
