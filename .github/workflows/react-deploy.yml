@@ -26,9 +26,11 @@ jobs:
       with:
         version: 12
 
-    # Runs a set of commands using the runners shell
+    - name: Installing Yarn CLI
+      uses: CultureHQ/actions-yarn@v1.0.1
+  
     - name: Building App
-      run: npm run build
+      run: yarn build
       
     - name: Deploy App
       run: surge ./assignment02/ simple-react-app.sh --token ${{ secrets.SURGE_TOKEN }}
