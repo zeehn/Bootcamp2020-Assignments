@@ -31,7 +31,7 @@ jobs:
   
     - name: Building App
       run: |
-          cd assignment02
+          cd "/home/runner/work/Bootcamp 2020-Assignments/Bootcamp 2020-Assignments/assignment02/"
           yarn build
       
     - name: Deploy App
