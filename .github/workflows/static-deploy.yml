@@ -1,0 +1,29 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI for a Static Site
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    # Install Node
+    - name: Installing NodeJS
+      uses: actions/setup-node@v2-beta
+      with:
+        node-version: 12
+
+    # Install Surge
+    - name: Installing Surge
+      run: npm install --global surge
+
+    # Deploy using Surge
+    - name: Deploying App using Surge
+      run: surge ./ http://zeehn-static-site.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+
