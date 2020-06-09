@@ -25,5 +25,5 @@ jobs:
 
     # Deploy using Surge
     - name: Deploying App using Surge
-      run: surge ./ http://zeehn-static-site.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+      run: surge ./Assignment-01/ http://zeehn-static-site.surge.sh --token ${{ secrets.SURGE_TOKEN }}
 
