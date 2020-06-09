@@ -30,9 +30,8 @@ jobs:
       uses: CultureHQ/actions-yarn@v1.0.1
   
     - name: Building App
-      run: |
-        cd /home/runner/work/Bootcamp2020-Assignments/Bootcamp2020-Assignments/assignment02
-        yarn build
+      working-directory: ./assignment02
+      run: yarn build
       
     - name: Deploy App
       run: surge ./assignment02/ simple-react-app.sh --token ${{ secrets.SURGE_TOKEN }}
