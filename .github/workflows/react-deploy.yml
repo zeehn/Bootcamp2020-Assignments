@@ -30,9 +30,9 @@ jobs:
       uses: CultureHQ/actions-yarn@v1.0.1
   
     - name: Building App
-      run: yarn build
+      run: pwd
       working-directory: ./assignment02
       
-    - name: Deploy App
-      run: surge ./assignment02/ simple-react-app.sh --token ${{ secrets.SURGE_TOKEN }}
+#     - name: Deploy App
+#       run: surge ./assignment02/ simple-react-app.sh --token ${{ secrets.SURGE_TOKEN }}
     
